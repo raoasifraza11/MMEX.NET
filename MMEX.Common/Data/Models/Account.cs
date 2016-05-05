@@ -1,4 +1,4 @@
-﻿using Data.Business.Contracts;
+﻿using MMEX.Common.Data.Business.Contracts;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.Models
+namespace MMEX.Common.Data.Models
 {
     [Table("ACCOUNTLIST_V1")]
     public class Account : IEntity
@@ -17,6 +17,7 @@ namespace Data.Models
 
         [Column("ACCOUNTID"),
             PrimaryKey,
+            AutoIncrement
             NotNull]
         public int Id { get; set; }
 
@@ -63,5 +64,6 @@ namespace Data.Models
         [Column("CURRENCYID"),
             NotNull]
         public int Currency { get; set; }
+
     }
 }

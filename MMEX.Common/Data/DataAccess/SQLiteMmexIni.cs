@@ -1,25 +1,26 @@
-﻿using MMEX.Common.Data.Models;
+﻿using MMEX.Common.Data.Business;
+using MMEX.Common.Data.Models;
 using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace MMEX.Common.Data.DataAccess
 {
-    public class SQLiteDatabase
+    public class SQLiteMmexIni
     {
         static object locker = new object();
 
         SQLiteConnection database;
 
-        public SQLiteDatabase(string DbPath)
+        public SQLiteMmexIni(string DbPath)
         {
             // database = DependencyService.Get<ISQLite>().GetConnection();
             database = new SQLiteConnection(DbPath);
-            database.CreateTable<Account>();
-            database.CreateTable<Currency>();
-            database.CreateTable<OptionDb>();
+            database.CreateTable<OptionLocal>();;
         }
 
         static readonly object Locker = new object();
@@ -28,7 +29,7 @@ namespace MMEX.Common.Data.DataAccess
         {
             lock (Locker)
             {
-                return (from i in database.Table<T>() select i);
+                return (from i in database.Table<T>() select i).ToList();
             }
         }
 
@@ -49,12 +50,11 @@ namespace MMEX.Common.Data.DataAccess
                     if (item.Id != 0)
                     {
                         database.Update(item);
-                        Debug.WriteLine("DATABASE UPDATE -> " + item.ToString() + " - " + item.Id);
+                        Debug.WriteLine("INI DATABASE UPDATE -> " + item.ToString() + " - " + item.Id);
                         return item.Id;
                     }
-                    database.Insert(item);
-                    Debug.WriteLine("DATABASE INSERT -> " + item.ToString() + " - " + item.Id);
-                    return item.Id;
+                    Debug.WriteLine("INI DATABASE INSERT -> " + item.ToString() + " - " + item.Id);
+                    return database.Insert(item);
                 }
                 catch (Exception /*e*/)
                 {
@@ -67,7 +67,7 @@ namespace MMEX.Common.Data.DataAccess
         {
             lock (Locker)
             {
-                Debug.WriteLine("DATABASE DELETE -> " + id.ToString());
+                Debug.WriteLine("INI DATABASE DELETE -> " + id.ToString());
                 return database.Delete<T>(id);
             }
         }

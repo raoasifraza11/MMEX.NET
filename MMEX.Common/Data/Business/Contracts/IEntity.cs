@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Data.Business.Contracts
+namespace MMEX.Common.Data.Business.Contracts
 {
     public interface IEntity
     {

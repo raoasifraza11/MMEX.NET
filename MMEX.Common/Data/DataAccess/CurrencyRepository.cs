@@ -8,33 +8,33 @@ using System.Threading.Tasks;
 
 namespace MMEX.Common.Data.DataAccess
 {
-    public class AccountRepository
+    public class CurrencyRepository
     {
         SQLiteDatabase _db = null;
 
-        public AccountRepository(string DbPath)
+        public CurrencyRepository(string DbPath)
         {
             _db = new SQLiteDatabase(DbPath);
         }
 
-        public Account GetById(int id)
+        public Currency GetByKey(int id)
         {
-            return _db.GetItem<Account>(id);
+            return _db.GetItem<Currency>(id);
         }
 
-        public IEnumerable<Account> GetAll()
+        public IEnumerable<Currency> GetAll()
         {
-            return _db.GetItems<Account>();
+            return _db.GetItems<Currency>();
         }
 
-        public int Save(Account account)
+        public int Save(Currency currency)
         {
-            return _db.SaveItem<Account>(account);
+            return _db.SaveItem<Currency>(currency);
         }
 
         public int Delete(int id)
         {
-            return _db.DeleteItem<Account>(id);
+            return _db.DeleteItem<Currency>(id);
         }
     }
 }

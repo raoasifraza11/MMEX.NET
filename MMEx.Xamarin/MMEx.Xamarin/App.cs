@@ -5,7 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace MMEx.Xamarin
+namespace MMEx.XForms
 {
     public class App : Application
     {

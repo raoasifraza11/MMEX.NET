@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace MMEx.Xamarin.UWP
+namespace MMEx.XForms.UWP
 {
     public sealed partial class MainPage
     {
@@ -21,7 +21,7 @@ namespace MMEx.Xamarin.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new MMEx.Xamarin.App());
+            LoadApplication(new MMEx.XForms.App());
         }
     }
 }

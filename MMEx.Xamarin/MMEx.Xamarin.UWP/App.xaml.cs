@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace MMEx.Xamarin.UWP
+namespace MMEx.XForms.UWP
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.

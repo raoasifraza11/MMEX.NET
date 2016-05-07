@@ -128,7 +128,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MMEx.Xamarin\MMEx.XForms.csproj">
+    <ProjectReference Include="..\MMEx.XForms\MMEx.XForms.csproj">
       <Name>MMEx.XForms</Name>
       <Project>{FFCC698D-E6E7-4634-9FB6-B65434255651}</Project>
     </ProjectReference>

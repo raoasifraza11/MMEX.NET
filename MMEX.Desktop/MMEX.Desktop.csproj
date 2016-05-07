@@ -37,7 +37,15 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>..\..\MMEX.Common\Resources\Logos\mmex.ico</ApplicationIcon>
+    <ApplicationIcon>..\MMEX.Common\Resources\Logos\mmex.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Portable.DataAnnotations, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -110,11 +118,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MMEX.Common\Data\MMEX.Common.Data.csproj">
+    <ProjectReference Include="..\MMEX.Common\Data\MMEX.Common.Data.csproj">
       <Project>{5f238485-1691-4a9d-b398-4573854d397e}</Project>
       <Name>MMEX.Common.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\MMEX.Common\Resources\MMEX.Common.Resources.csproj">
+    <ProjectReference Include="..\MMEX.Common\Resources\MMEX.Common.Resources.csproj">
       <Project>{68e64586-295d-482c-8870-e38068fa37a0}</Project>
       <Name>MMEX.Common.Resources</Name>
     </ProjectReference>

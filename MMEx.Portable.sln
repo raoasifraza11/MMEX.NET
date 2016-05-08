@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMEX.Common.Data", "MMEX.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMEx.XForms", "MMEx.Portable\MMEx.XForms\MMEx.XForms.csproj", "{FFCC698D-E6E7-4634-9FB6-B65434255651}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMEx.XForms.Droid", "MMEx.Portable\MMEx.XForms.Droid\MMEx.XForms.Droid.csproj", "{1A6CA0B6-C281-4F1C-A9E5-265060B7F21D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMEx.Net.Android", "MMEx.Portable\MMEx.XForms.Droid\MMEx.Net.Android.csproj", "{1A6CA0B6-C281-4F1C-A9E5-265060B7F21D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMEx.XForms.UWP", "MMEx.Portable\MMEx.XForms.UWP\MMEx.XForms.UWP.csproj", "{479B0549-E0D3-4F7E-863B-7EE74B50A9CE}"
 EndProject

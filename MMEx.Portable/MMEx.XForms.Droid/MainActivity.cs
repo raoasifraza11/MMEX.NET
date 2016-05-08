@@ -9,7 +9,8 @@ using Android.OS;
 
 namespace MMEx.XForms.Droid
 {
-    [Activity(Label = "MMEx.Xamarin.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    //[Activity(Label = "MMEx.XForms.Droid", Icon = "@drawable/icon", MainLauncher = true, 
+    //    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)

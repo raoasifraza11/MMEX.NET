@@ -15,5 +15,11 @@ namespace MMEx.XForms.Droid
     [Activity]
     public class TutorialActivity : Activity
     {
+        public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
+        {
+            base.OnCreate(savedInstanceState, persistentState);
+
+            SetContentView(Resource.Layout.Tutorial);
+        }
     }
 }

@@ -139,6 +139,10 @@
       <Name>MMEx.XForms</Name>
       <Project>{FFCC698D-E6E7-4634-9FB6-B65434255651}</Project>
     </ProjectReference>
+    <ProjectReference Include="AndroidBindings\Binding_Circleindicator\Binding_Circleindicator.csproj">
+      <Project>{4960F3A9-C898-4D97-AC0F-63A00E96B6E0}</Project>
+      <Name>Binding_Circleindicator</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
